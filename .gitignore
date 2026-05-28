@@ -36,3 +36,10 @@ venv/
 
 # ChromaDB local data
 *.sqlite3-journal
+# Track shared Claude Code agents/commands while keeping local Claude state ignored.
+!.claude/
+.claude/*
+!.claude/agents/
+!.claude/agents/**
+!.claude/commands/
+!.claude/commands/**
