@@ -131,3 +131,9 @@ Knowledge Graph:
 - **Adding a storage backend**: subclass `mempalace/backends/base.py`, register in `backends/__init__.py`
 - **Input validation**: `mempalace/config.py` — `sanitize_name()` / `sanitize_content()`
 - **Tests**: mirror source structure in `tests/test_<module>.py`
+
+## Webhooks (FACTUEL)
+- Les webhooks ne livrent QUE les échecs, jamais les succès.
+- Ne JAMAIS attendre un webhook de succès, il n'arrivera pas.
+- Pour confirmer qu'un job a réussi : interroger directement
+  [ton endpoint/commande de statut] et vérifier le statut réel.
